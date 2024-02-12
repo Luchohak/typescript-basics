@@ -7,10 +7,12 @@ let isInstructor: boolean = true;
 let hobbies: string[];
 hobbies = ["Sports", "Coocking"];
 
-let person: {
-  name: string;
-  age: number;
-};
+type Person = {
+    name: string;
+    age: number;
+  };
+
+let person: Person;
 
 person = {
   name: "Max",
@@ -18,9 +20,17 @@ person = {
 };
 
 //An array of people
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
+
+//Type Inference 
+let course = 'React - the complete guide';
+
+//Typescript will infere the type of 'course' as a string and wont let you assign a different type
+//course = 123;
+
+//Union types: have more than 1 type for a variable
+let courses: string | string[] | number = 'React - the complete guide';
+
+
 
 //Function types, parameters
